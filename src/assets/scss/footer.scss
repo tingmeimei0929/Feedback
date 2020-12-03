@@ -1,0 +1,31 @@
+.container{
+    max-width: 1260px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+
+    &.footer{
+        background-color: #333;
+        color: #fff;
+        border-top: 5px solid #777;
+        padding: 15px 30px;
+
+        ul{
+            width: inherit;
+            display: flex;
+            flex: 1 0 auto;
+            li{
+                display: block;
+                float: left;
+                padding: 0 30px 15px 0;
+
+                a{
+                    color: #fff;
+                }
+            }
+        }
+        .present{
+            display: block;
+        }
+    }
+}
