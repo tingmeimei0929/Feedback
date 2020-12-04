@@ -4,14 +4,14 @@
             <div class="container">
                 <div class="sort">
                     <ul>
-                        <li>
-                            <router-link to="/NoPurchase">未购买，如何购买</router-link>
+                        <li @click="goNoPurchase">
+                            <a>未购买，如何购买</a>
                         </li>
-                        <li>
-                            <router-link to="/Purchase">已购买，如何使用</router-link>
+                        <li @click="goPurchase">
+                            <a>已购买，如何使用</a>
                         </li>
-                        <li>
-                            <router-link to="/Message">请上传的您的问题</router-link>
+                        <li @click="goMessage">
+                            <a>请上传的您的问题</a>
                         </li>
                     </ul>
                 </div>
@@ -27,16 +27,34 @@
 import navHeader from '../components/Header'
 import navFooter from '../components/Footer'
 export default {
-     name: "Main",
-     data() {
-         return {
-            
-         };
-     },
-     components: {
-         navHeader,
-         navFooter
-     }
+    name: "Main",
+    data() {
+        return {
+        
+        };
+    },
+    components: {
+        navHeader,
+        navFooter
+    },
+    methods:{
+        goNoPurchase() {
+            this.$router.push({
+                path: '/NoPurchase'
+            })
+        },
+        goPurchase() {
+            this.$router.push({
+                path: '/Purchase'
+            })
+        },
+        goMessage() {
+            this.$router.push({
+                path: '/Message'
+            })
+        }
+
+    }
 };
 </script>
   

@@ -1,6 +1,7 @@
 .main{
     width: 100%;
     position: relative;
+    overflow: hidden;
 
     .container{
         width: 1260px;
@@ -9,31 +10,43 @@
 
         .sort{
             width: inherit;
-            padding: 20px 80px;
             
             ul{
+                margin: 10px 80px;
                 display: flex;
                 justify-content: space-between;
-                background-color: khaki;
+
                
                 li{
                     flex: 1;
-                    height: 40px;
-                    line-height: 40px;
                     text-align: center;
                     margin-bottom: 10px;
+                    background: #fff;
+                    margin-left: 10px;
+                    font-weight: 500;
+                    font-size: 20px;
+                    padding: 10px;
                     a{
-                        color: #333;
+                        color: #26747a;
+
+                    }
+                }
+                li:hover{
+                    background-color: #333;
+                    a{
+                        color: #fff;
                     }
                 }
             }
         }
 
-        .el.main{
-            width: 1000px;
-
-            .p{
-                text-align: start;
+        .main-content{
+            width: inherit;
+            overflow: hidden;
+            .content{
+                margin: 10px 85px;
+                background-color: #fff;
+                
             }
         }
     }

@@ -10,6 +10,10 @@ const routes = [
     component: Main,
     children: [
         {
+            path: '/',
+            redirect: 'NoPurchase'
+        },
+        {
             path: 'NoPurchase',
             name: 'NoPurchase',
             // route level code-splitting
