@@ -1,22 +1,40 @@
 <template>
     <div class="content">
-        <el-from>
-            <el-from-item>
-                <el-input placeholder=""></el-input>
-            </el-from-item>
-        </el-from>
-        <h2>留言板</h2>
-        <p>在这可以留下您的问题，建议或者是想说的话。</p>
-        <el-input type="textarea" :rows="2" placeholder="请输入内容"  autosize v-model="textarea">
-        </el-input>
-        <el-upload class="upload-demo" 
-                    darg 
-                    action="https://jsonplaceholder.typicode.com/posts/" 
-                    multiple>
-            <i class="el-icon-upload"></i>
-            <div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
-            <div class="el-upload__tip" slot="tip">只能长传jpg/png文件，且不超过500kb</div>
-        </el-upload>
+        <el-form ref="ruleForm" :model="ruleForm" label-width="100px" class="message-form">
+            <el-form-item label="用户信息" prop="username">
+                <el-input v-model="ruleForm.username" class="enterDesc"></el-input>
+            </el-form-item>
+            <el-form-item label="商户订单号" prop="singleNumber">
+                <el-input v-model="ruleForm.singleNumber" class="enterDesc" placeholder="请输入您的商户订单号"></el-input>
+                <small class="prompt">如果您使用支付宝支付，请打开手机支付宝，点击“我的” - “订单”，找到商户订单号(FT开头)，并将商户订单号和您的手机号发送至客服邮箱。</small>
+                <small class="prompt">如果您使用微信支付，请打开手机微信，在信息流中点击“微信支付” - 找到并点击订购FT中文网的订单，找到商户单号，将商户单号和您的手机号发送至客服邮箱。</small>
+            </el-form-item>
+            <el-form-item label="联系方式" prop="contactInfo">
+                <el-input v-model="ruleForm.contactInfo" class="enterDesc" placeholder="请输入您的联系方式"></el-input>
+            </el-form-item>
+            <el-form-item label="留言" prop="desc">
+                <el-input type="textarea" v-model="ruleForm.desc" class="enterDesc"></el-input>
+            </el-form-item>
+            <el-form-item label="上传" prop="fileList">
+                <el-upload  class="upload-demo"
+                            drag
+                            action="https://jsonplaceholder.typicode.com/posts/"
+                            multiple>
+                    <i class="el-icon-upload"></i>
+                    <div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
+                    <div class="el-upload__tip" slot="tip">只能上传jpg/png文件，且不超过500kb</div>
+                </el-upload>
+            </el-form-item>
+            <el-form-item>
+                <el-button  type="primary" @click="onSubmit" style="margin-left:100px;">提交</el-button>
+                <el-button>取消</el-button>
+            </el-form-item>
+        </el-form>
+        <!-- <div class="customerService">
+            <h3>客服联系方式</h3>
+            <p>邮箱：subscriber.service@ftchinese.com</p>
+            <p>电话：010-xxxxxxxx</p>
+        </div> -->
     </div>
 </template>
     
@@ -25,10 +43,34 @@ export default {
     name: "Message",
     data() {
         return {
-            textarea:''
-        };
+            ruleForm: {
+                username: '',
+                singleNumber: '',
+                contactInfo: '',
+                desc: ''
+            },
+            rules: {
+
+            }
+        }
+    },
+    methods: {
+        onSubmit() {
+            this.$refs.ruleForm.validate(valid => {
+                //如果通过校验开始登录
+                if (valid) {
+                    this.axios.post('', {
+                        userName: this.ruleForm.username,
+                    }).then(res => {
+                        
+                    }).catch(err => {
+                        
+                    })
+                }
+            })
+        }
     }
-};
+}
 </script>
 
 <style lang="scss" scoped>

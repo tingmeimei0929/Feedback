@@ -42,12 +42,34 @@
 
         .main-content{
             width: inherit;
-            overflow: hidden;
             .content{
-                margin: 10px 85px;
+                margin:10px 80px 30px 90px;
                 background-color: #fff;
-                
+                overflow:hidden;
+                display: flex;
+                justify-content: space-around;
+                text-align: start;
+
+                .el-steps{
+                    width: 300px;
+                }
+
+                .message-form{
+                    margin:30px 60px;
+                    width: 70%;
+
+                    .enterDesc{
+                        width: 400px;
+                    }
+                    .prompt{
+                        display: block;
+                    }
+                }
+                .customerService{
+                    width: 30%;
+                }
             }
+
         }
     }
 }
