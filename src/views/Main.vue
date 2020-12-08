@@ -4,7 +4,7 @@
             <div class="container">
                 <div class="sort">
                     <ul>
-                        <li @click="goNoPurchase">
+                        <li @click="goNoPurchase" >
                             <a>未购买，如何购买</a>
                         </li>
                         <li @click="goPurchase">
@@ -30,7 +30,7 @@ export default {
     name: "Main",
     data() {
         return {
-        
+
         };
     },
     components: {
@@ -53,7 +53,6 @@ export default {
                 path: '/Message'
             })
         }
-
     }
 };
 </script>
