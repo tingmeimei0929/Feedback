@@ -2,42 +2,37 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  html,
-  body {
+}
+html,body {
     min-width: 1260px;
     font-family: "Helvetica Neue","Verdana","Arial","Hiragino Sans GB","WenQuanYi Micro Hei","Heiti SC",STHeiti,"Microsoft Yahei",SimSun,sans-serif;
-    font: 16px;
+    font-size: 1em;
     background: #fff1e5 0 0;
-  }
-  
-  ul,
-  ol,
-  li {
+}
+ul,
+ol,
+li {
     list-style-type: none;
-  }
-  
-  a {
+}
+
+a {
     text-decoration: none;
-  }
-  
-  button,
-  input,
-  select {
+}
+
+button,
+input,
+select {
     outline: none;
-  }
-  
-  input {
+}
+
+input {
     border: none;
-  }
-  
-  .icon, .iconfont{
+}
+.icon, .iconfont{
     font-family:"iconfont" !important;
-    font-size:16px;
+    font-size: 1em;
     font-style:normal;
     -webkit-font-smoothing: antialiased;
     -webkit-text-stroke-width: 0.2px;
     -moz-osx-font-smoothing: grayscale;
-  
-  }
+}

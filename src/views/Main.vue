@@ -3,16 +3,10 @@
         <navHeader></navHeader>
             <div class="container">
                 <div class="sort">
-                    <ul>
-                        <li @click="goNoPurchase" >
-                            <a>未购买，如何购买</a>
-                        </li>
-                        <li @click="goPurchase">
-                            <a>已购买，如何使用</a>
-                        </li>
-                        <li @click="goMessage">
-                            <a>请上传的您的问题</a>
-                        </li>
+                    <ul class="sortName">
+                        <router-link to="/NoPurchase" tag="li">未购买，如何购买</router-link>
+                        <router-link to="/Purchase" tag="li">已购买，如何使用</router-link>
+                        <router-link to="/Message" tag="li">请上传的您的问题</router-link>
                     </ul>
                 </div>
                 <div class="main-content">
