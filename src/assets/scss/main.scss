@@ -2,12 +2,9 @@
     width: 100%;
     position: relative;
     overflow: hidden;
+    $color: #26747a;
 
     .container{
-        width: 1260px;
-        margin-left: auto;
-        margin-right: auto;
-
         .sort{
             width: inherit;
             margin-top: 20px;
@@ -28,7 +25,7 @@
                     font-size: 20px;
                     padding: 10px;
                     cursor: pointer;
-                    color: #26747a;
+                    color: $color;
                 }
                 li:hover{
                     background-color: #333;
@@ -43,19 +40,20 @@
                 margin:10px 80px 30px 90px;
                 padding-top: 30px;
                 background-color: #fff;
-                display: flex;
                 overflow:hidden;
 
                 .el-steps{
-                    width: 200px;
-                    margin-left: 40px;
+                    width: inherit;
+                    height: 40px;
+                    margin-bottom: 20px;
+                   
                 }
                 .el-step.is-vertical .el-step__title {
                     padding-bottom: 80px !important;
                     line-height: 33px !important;
                 }
                 .reveal{
-                    flex: 1;
+                    width: inherit;
                     position: relative;
 
                     .step{
@@ -68,7 +66,7 @@
                                 font-size: 1.2em;
                                 font-weight: 700;
                                 a{
-                                    color: #26747a;
+                                    color: $color;
                                 }
                             }
                         }
@@ -97,7 +95,7 @@
                                     padding-bottom: 10px;
     
                                     a,span{
-                                        color: #26747a;
+                                        color: $color;
                                     }
                                 }
                                 &.list-style-desc{
@@ -105,7 +103,7 @@
                                         list-style-type: disc;
 
                                         a,span{
-                                            color: #26747a;
+                                            color: $color;
                                         }
                                     }
                                 }
@@ -114,7 +112,7 @@
                                         list-style-type: none;
 
                                         a,span{
-                                            color: #26747a;
+                                            color: $color;
                                         }
                                     }
                                 }
@@ -127,10 +125,10 @@
                        text-align: center;
 
                        .el-button{
-                           background-color: #26747a;
+                           background-color: $color;
                            color: #fff;
                            font-size: 20px;
-                           border-color: #26747a;
+                           border-color: $color;
 
                            &.pre{
                                 margin-right: 10px;

@@ -26,4 +26,5 @@ export default {
   
 <style lang="scss" scoped>
 @import url('../assets/scss/header.scss');
+
 </style>

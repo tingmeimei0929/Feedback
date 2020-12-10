@@ -3,11 +3,25 @@
     padding: 0;
     box-sizing: border-box;
 }
+@mixin basem {
+    html {
+        font-size: ($vm_fontsize / ($vm_design)) * 100vw;
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        user-select: none;
+    }
+}
 html,body {
-    min-width: 1260px;
     font-family: "Helvetica Neue","Verdana","Arial","Hiragino Sans GB","WenQuanYi Micro Hei","Heiti SC",STHeiti,"Microsoft Yahei",SimSun,sans-serif;
     font-size: 1em;
     background: #fff1e5 0 0;
+}
+.container{
+    position: relative;
+    max-width: 1260px;
+    min-width: 240px;
+    margin-left: auto;
+    margin-right: auto;
 }
 ul,
 ol,

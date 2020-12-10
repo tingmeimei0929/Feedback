@@ -1,3 +1,5 @@
+const { resolve } = require('path')
+const path = require('path')
 module.exports = {
     devServer: {
         proxy: {
@@ -11,4 +13,12 @@ module.exports = {
             }
         }
     }
+    // chainWebpack: (config) => {
+    //     config.resolve.alias
+    //         .set('@', resolve('src'))
+    //         .set('@assets', resolve('src/assets'))
+    //         .set('@components', resolve('src/components'))
+    //         .set('@store', resolve('src/store'))
+    //         .set('@views', resolve('src/views'))
+    // }
 }

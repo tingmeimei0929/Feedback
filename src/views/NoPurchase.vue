@@ -1,6 +1,6 @@
 <template>
     <div class="content">
-        <el-steps :active="active" align-center finish-status="success" direction="vertical" >
+        <el-steps :active="active" align-center finish-status="success" >
             <el-step title="步骤1" description=""></el-step>
             <el-step title="步骤2" description=""></el-step>
             <el-step title="步骤3" description=""></el-step>

@@ -1,11 +1,11 @@
 <template>
     <div class="content">
-        <el-steps :active="active" align-center finish-status="success" direction="vertical" style="float:left; width:300px">
+        <el-steps :active="active" align-center finish-status="success">
             <el-step title="步骤1" description=""></el-step>
             <el-step title="订阅问题" description=""></el-step>
             <el-step title="账号修改问题" description=""></el-step>
         </el-steps>
-        <div class="reveal" style="float:left;">
+        <div class="reveal">
             <div v-if="active==1" class="step active1">
                 <h2 v-if="user">欢迎{{ suername }}登录FT中文网！</h2>
                 <h2 v-if="!user">请<a href="">点击此处</a>登录</h2>

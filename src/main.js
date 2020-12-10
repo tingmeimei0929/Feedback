@@ -15,7 +15,10 @@ import './assets/scss/header.scss'
 import './assets/scss/main.scss'
 import './assets/scss/common.scss'
 import './assets/scss/footer.scss'
-
+import './assets/scss/_var.scss'
+import './assets/scss/_config.scss'
+import './assets/scss/_mixins.scss'
+import './assets/scss/variable.scss'
 new Vue({
   router,
   store,
