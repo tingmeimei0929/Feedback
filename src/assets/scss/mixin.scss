@@ -1,0 +1,43 @@
+@charset "utf-8";
+$vm_fontsize: 96; 
+@function rem($px) {
+     @return ($px / $vm_fontsize ) * 1rem;
+}
+@function pc($px) {
+  @return ( $px / 0.375 / 2) *1px;
+}
+@function em($px) {
+  @return (($px / 0.75) / 100) * 1em;
+}
+@function emMin($px) {
+  @return (($px / 0.54) / 100) * 1em;
+}
+
+$vm_design: 750;
+@mixin clearfix{
+    &:after{
+        visibility: hidden;
+        display: block;
+        content: " ";
+        clear: both;
+    }
+}
+
+@mixin mediaQueryPC{
+    @media only (max-width: 1900px)
+    {
+        @content;
+    }
+}
+@mixin mediaQueryMobile{
+    @media only (max-width: 768px)
+    {
+        @content;
+    }
+}
+@mixin mediaQueryIPad{
+    @media only (max-width: 992px)
+    {
+        @content;
+    }
+}

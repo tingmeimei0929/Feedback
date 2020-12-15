@@ -53,5 +53,9 @@ export default {
 
 <style lang="scss" scoped>
 @import url('../assets/scss/main.scss');
-
+@import url('../assets/scss/mixin.scss');
+@import url('../assets/scss/common.scss');
+@mixin mediaQueryMobile{
+    @include basem;
+}
 </style>

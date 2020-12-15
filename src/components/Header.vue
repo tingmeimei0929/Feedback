@@ -26,5 +26,10 @@ export default {
   
 <style lang="scss" scoped>
 @import url('../assets/scss/header.scss');
-
+@import url('../assets/scss/mixin.scss');
+@import url('../assets/scss/common.scss');
+@include mediaQueryMobile {
+    @include mobileLayout;
+    @include basem;
+}
 </style>

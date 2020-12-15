@@ -3,7 +3,6 @@
     background-color: #f2e0d0;
     h2{
         display: block;
-        width: inherit;
         height: 56px;
         line-height: 56px;
         padding: 0 30px;
@@ -37,5 +36,46 @@
             background-size: contain;
         }
 
+    }
+}
+
+@mixin mobileLayout {
+    .header{
+        height: 270px;
+        background-color: #f2e0d0;
+        h2{
+            display: block;
+            height: 56px;
+            line-height: 56px;
+            padding: 0 30px;
+            font-size: 1.5em;
+            max-width: 100%;
+            font-weight: 700;
+            text-align: center;
+            color: #fff;
+            background-color: #333;
+        }
+        .banner{
+            margin: 0 60px;
+    
+            .banner-welcome{
+                display: block;
+                padding-top: 30px;
+                text-align: start;
+                
+    
+                h3{
+                    margin-bottom: 10px;
+                }
+            }
+            .banner-image{
+                display: block;
+                width: 380px;
+                height: 214px;
+                background: url(https://www.ftacademy.cn/subscription.jpg) no-repeat;
+                background-size: contain;
+            }
+    
+        }
     }
 }
