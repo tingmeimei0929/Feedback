@@ -6,8 +6,8 @@
             </el-form-item>
             <el-form-item label="商户订单号" prop="singleNumber">
                 <el-input v-model="ruleForm.singleNumber" class="enterDesc" placeholder="请输入您的商户订单号"></el-input>
-                <small class="prompt">如果您使用支付宝支付，请打开手机支付宝，点击“我的” - “订单”，找到商户订单号(FT开头)，并将商户订单号和您的手机号发送至客服邮箱。</small>
-                <small class="prompt">如果您使用微信支付，请打开手机微信，在信息流中点击“微信支付” - 找到并点击订购FT中文网的订单，找到商户单号，将商户单号和您的手机号发送至客服邮箱。</small>
+                <p class="prompt">1、如果您使用支付宝支付，请打开手机支付宝，点击“我的” - “订单”，找到商户订单号(FT开头)，并将商户订单号和您的手机号发送至客服邮箱。</p>
+                <p class="prompt">2、如果您使用微信支付，请打开手机微信，在信息流中点击“微信支付” - 找到并点击订购FT中文网的订单，找到商户单号，将商户单号和您的手机号发送至客服邮箱。</p>
             </el-form-item>
             <el-form-item label="联系方式" prop="contactInfo">
                 <el-input v-model="ruleForm.contactInfo" class="enterDesc" placeholder="请输入您的联系方式"></el-input>

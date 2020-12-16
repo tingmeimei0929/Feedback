@@ -1,23 +1,92 @@
+@import './mixin.scss';
+@import './palette.scss';
+@import './common.scss';
 .footer{
-    background-color: #333;
-    color: #fff;
-    border-top: 5px solid #777;
+    background-color: $color-block;
+    color: $color-white;
+    border-top: 5px solid $color-border;
     padding: 15px 30px;
 
-    ul{
+    .list{
+        display: block;
         padding: 10px 20px;
-        display: flex;
-        li{
+        a{
             display: block;
-            padding: 0 30px 15px 0;
-            flex: 1;
-
-            a{
-                color: #fff;
-            }
+            padding: 0 20px 15px 0;
+            float: left;
+            color: $color-white;
         }
     }
     .present{
         display: block;
+        padding-left: 20px;
+        @include font-size(14px);
+
+        p{
+            float: left;
+            padding: 0 30px 10px 0;;
+        }
+    }
+}
+
+@include bp-middle {
+    .footer{
+        background-color: $color-block;
+        color: $color-white;
+        border-top: 5px solid $color-border;
+        padding: 15px 30px;
+    
+        .list{
+            display: block;
+            padding: 10px 20px;
+            a{
+                display: block;
+                padding: 0 20px 15px 0;
+                width: 50%;
+                float: left;
+                color: $color-white;
+            }
+        }
+        .present{
+            display: block;
+            padding-left: 20px;
+            @include font-size(14px);
+    
+            p{
+                float: left;
+                padding: 0 30px 10px 0;;
+            }
+        }
+    }
+}
+
+@include bp-small {
+    .footer{
+        background-color: $color-block;
+        color: $color-white;
+        border-top: 5px solid $color-border;
+        padding: 15px 30px;
+    
+        .list{
+            display: block;
+            padding: 10px 20px;
+            a{
+                display: block;
+                padding: 0 30px 15px 0;
+                width: 50%;
+                float: left;
+                color: $color-white;
+            }
+        }
+        .present{
+            display: block;
+            padding-left: 20px;
+            @include font-size(14px);
+    
+            p{
+                float: left;
+                padding: 0 30px 10px 0;;
+            }
+        }
     }
 }

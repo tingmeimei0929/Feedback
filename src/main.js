@@ -18,6 +18,7 @@ import './assets/scss/main.scss'
 import './assets/scss/common.scss'
 import './assets/scss/footer.scss'
 import './assets/scss/mixin.scss'
+import './assets/scss/palette.scss'
 new Vue({
   router,
   store,

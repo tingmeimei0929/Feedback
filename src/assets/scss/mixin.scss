@@ -1,19 +1,49 @@
 @charset "utf-8";
-$vm_fontsize: 96; 
-@function rem($px) {
-     @return ($px / $vm_fontsize ) * 1rem;
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return $remSize * 1rem;
 }
-@function pc($px) {
-  @return ( $px / 0.375 / 2) *1px;
-}
-@function em($px) {
-  @return (($px / 0.75) / 100) * 1em;
-}
-@function emMin($px) {
-  @return (($px / 0.54) / 100) * 1em;
+@mixin font-size($size) {
+    font-size: $size;
+    font-size: calculateRem($size);
 }
 
-$vm_design: 750;
+@mixin bp-pc{
+    @media only screen and (min-width: 1221px)
+    {
+        @content;
+    }
+}
+@mixin bp-large{
+    @media only screen and (max-width: 1220px) and (min-width: 981px)
+    {
+        @content;
+    }
+}
+@mixin bp-middle{
+    @media only screen and  (max-width: 980px) and (min-width: 691px)
+    {
+        @content;
+    }
+}
+@mixin bp-small{
+    @media only screen and (max-width: 690px)
+    {
+        @content;
+    }
+}
+
+
+%visuallyhidden {
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip: rect(0, 0, 0, 0);
+    position: absolute;
+}
 @mixin clearfix{
     &:after{
         visibility: hidden;
@@ -23,21 +53,18 @@ $vm_design: 750;
     }
 }
 
-@mixin mediaQueryPC{
-    @media only (max-width: 1900px)
-    {
-        @content;
-    }
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie);
 }
-@mixin mediaQueryMobile{
-    @media only (max-width: 768px)
-    {
-        @content;
-    }
-}
-@mixin mediaQueryIPad{
-    @media only (max-width: 992px)
-    {
-        @content;
-    }
+
+@mixin positionAb($x , $y){ 
+    position: absolute; 
+    left:50%; 
+    top:50%; 
+    width: $x;
+    height: $y; 
+    margin-left:-$x/2; 
+    margin-top:-$y/2; z-index:99; 
 }
