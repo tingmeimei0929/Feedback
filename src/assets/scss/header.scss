@@ -40,38 +40,13 @@
             background: url(https://www.ftacademy.cn/subscription.jpg) no-repeat;
             background-size: contain;
         }
-    }
-}
-@include bp-large{
-    .header{
-        background-color: $color-header-bg;
-        h2{
-            display: block;
-            height: 56px;
-            line-height: 56px;
-            padding: 0 30px;
-            @include font-size(24px);
-            max-width: 100%;
-            font-weight: 700;
-            text-align: center;
-            color: $color-white;
-            background-color: $color-block;
-        }
-        .banner{
-            width: 80%;
-            margin: 0 auto;
-            padding-bottom:20px;
+        @include bp-large{
             .words{
                 display: block;
                 float: left;
                 text-align: left;
                 width: 50%;
                 padding:30px;
-    
-                .strong{
-                    padding: 10px 0;
-                    font-weight: 700;
-                }
             }
             .images{
                 display: block;
@@ -82,27 +57,8 @@
                 background-size: contain;
             }
         }
-    }
-}
-@include bp-middle {
-    .header{
-        background-color: $color-header-bg;
-        h2{
-            display: block;
-            height: 56px;
-            line-height: 56px;
-            padding: 0 30px;
-            @include font-size(24px);
-            max-width: 100%;
-            font-weight: 700;
-            text-align: center;
-            color: $color-white;
-            background-color: $color-block;
-        }
-        .banner{
-            width: 80%;
-            padding: 0 20px 20px 20px;
-            margin: 0 auto;
+
+        @include bp-middle {
             .words{
                 display: block;
                 float: left;
@@ -110,11 +66,6 @@
                 width: 60%;
                 padding:30px;
                 font-size: 14px;
-    
-                .strong{
-                    padding: 10px 0;
-                    font-weight: 700;
-                }
             }
             .images{
                 display: block;
@@ -126,34 +77,13 @@
                 background-size: contain;
             }
         }
-    }
-}
-@include bp-small {
-    .header{
-        background-color: $color-header-bg;
-        h2{
-            display: block;
-            height: 44px;
-            line-height: 44px;
-            padding: 0 30px;
-            @include font-size(24px);
-            max-width: 100%;
-            font-weight: 700;
-            text-align: center;
-            color: $color-white;
-            background-color: $color-block;
-        }
-        .banner{
+
+        @include bp-small {
             .words{
                 display: block;
                 text-align: left;
                 width: 100%;
                 padding: 0 !important;
-    
-                .strong{
-                    padding: 10px 0;
-                    font-weight: 700;
-                }
             }
             .images{
                 display: block;
@@ -165,3 +95,4 @@
         }
     }
 }
+

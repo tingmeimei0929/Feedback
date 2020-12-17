@@ -27,15 +27,8 @@
             padding: 0 30px 10px 0;;
         }
     }
-}
 
-@include bp-middle {
-    .footer{
-        background-color: $color-block;
-        color: $color-white;
-        border-top: 5px solid $color-border;
-        padding: 15px 30px;
-    
+    @include bp-middle{
         .list{
             display: block;
             padding: 10px 20px;
@@ -47,26 +40,9 @@
                 color: $color-white;
             }
         }
-        .present{
-            display: block;
-            padding-left: 20px;
-            @include font-size(14px);
-    
-            p{
-                float: left;
-                padding: 0 30px 10px 0;;
-            }
-        }
     }
-}
 
-@include bp-small {
-    .footer{
-        background-color: $color-block;
-        color: $color-white;
-        border-top: 5px solid $color-border;
-        padding: 15px 30px;
-    
+    @include bp-small {
         .list{
             display: block;
             padding: 10px 20px;
@@ -78,15 +54,6 @@
                 color: $color-white;
             }
         }
-        .present{
-            display: block;
-            padding-left: 20px;
-            @include font-size(14px);
-    
-            p{
-                float: left;
-                padding: 0 30px 10px 0;;
-            }
-        }
     }
 }
+

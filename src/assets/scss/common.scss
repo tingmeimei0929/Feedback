@@ -11,6 +11,7 @@
         -moz-user-select: none;
         -khtml-user-select: none;
         user-select: none;
+        height: 100%;
     }
 }
 html,body {
@@ -20,7 +21,10 @@ html,body {
     sans-serif;
     @include font-size(16px);
     background: $color-paper 0 0;
+    height: 100%;
+    line-height: initial !important;
 }
+
 .container{
     position: relative;
     min-width: 300px;
