@@ -259,5 +259,75 @@
             }
         }
     }
+    @include bp-xs {
+        .sortName{
+            margin: 0 10px 20px 10px !important;
+            display: flex;
+            justify-content: space-between;
+            li{
+                flex: 1;
+                flex-shrink: 0;
+                text-align: center;
+                background: $color-white;
+                margin-left: 10px;
+                font-weight: 500;
+                font-size: 14px;
+                padding: 15px 10px;
+                cursor: pointer;
+                color: $color-blue;
+            }
+            li:hover{
+                background-color: $color-block;
+                color: $color-white;
+            }
+        }
+        .content{
+            margin: 0 10px 20px 10px !important;
+            padding-top: 30px;
+            background-color: $color-white;
+            overflow:hidden;
+            .reveal{
+                margin: 20px 10px !important;
+                margin-top: 30px;
+                width: inherit;
+                position: relative;
+            }
+            .message-form{
+                margin:initial !important;
+                width: 100% !important;
+                .enterDesc{
+                    width: 80%;
+                    border-color: $color-border !important;
+                }
+                .prompt{
+                    display: block;
+                    width:80%;
+                }
+                .customerService{
+                    width: 30%;
+                }
+                .el-button--primary {
+                    background-color: $color-blue;
+                    color: $color-white;
+                    border-color: $color-blue;
+                    padding: 15px !important;
+                }
+                .el-button--default{
+                    background-color: $color-white;
+                    color: $color-block;
+                    padding: 15px !important;
+                }
+                .el-upload-dragger{
+                    width: 120px !important;
+                    .el-icon-upload{
+                        font-size: 50px !important;
+                    }
+                    .el-upload__text{
+                        font-size: 12px !important;
+                    }
+                }
+            }
+        }
+    }
 }
 
