@@ -9,11 +9,10 @@
         .sort{
             width: inherit;
             margin:20px 0;
-            ul{
+            .sortName{
                 margin: 10px 80px;
                 display: flex;
                 justify-content: space-between;
-                
                 li{
                     flex: 1;
                     flex-shrink: 0;
@@ -161,6 +160,9 @@
                         color: $color-block;
                         padding: 15px 30px;
                     }
+                    .el-upload-list__item{
+                        width: 80% !important;
+                    }
                 }
             }
         }
@@ -178,7 +180,6 @@
         .prompt{
             display: block;
             width:80%;
-            margin-left: 20% !important;
         }
         .el-upload-dragger{
             width: 320px !important;
@@ -187,12 +188,9 @@
                 font-size: 50px !important;
             }
         }
-        .el-form-item__content{
-            margin-left: 30px !important;
-        }
     }
     @include bp-small {
-        ul{
+        .sortName{
             margin: 0 10px 20px 10px !important;
             display: flex;
             justify-content: space-between;
@@ -203,7 +201,7 @@
                 background: $color-white;
                 margin-left: 10px;
                 font-weight: 500;
-                font-size: 20px;
+                font-size: 14px;
                 padding: 15px 10px;
                 cursor: pointer;
                 color: $color-blue;
@@ -213,7 +211,6 @@
                 color: $color-white;
             }
         }
-    
         .content{
             margin: 0 10px 20px 10px !important;
             padding-top: 30px;
@@ -244,8 +241,6 @@
                     color: $color-white;
                     border-color: $color-blue;
                     padding: 15px 30px;
-                    margin-left: initial !important;
-                    
                 }
                 .el-button--default{
                     background-color: $color-white;
@@ -253,9 +248,12 @@
                     padding: 15px 30px;
                 }
                 .el-upload-dragger{
-                    width: 230px !important;
+                    width: 190px !important;
                     .el-icon-upload{
                         font-size: 50px !important;
+                    }
+                    .el-upload__text{
+                        font-size: 12px !important;
                     }
                 }
             }

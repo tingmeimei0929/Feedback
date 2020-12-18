@@ -15,19 +15,19 @@
     }
 }
 @mixin bp-large{
-    @media only screen and (max-width: 1220px) and (min-width: 981px)
+    @media only screen and (max-width: 1220px) and (min-width: 992px)
     {
         @content;
     }
 }
 @mixin bp-middle{
-    @media only screen and  (max-width: 980px) and (min-width: 691px)
+    @media only screen and  (max-width: 991px) and (min-width: 768px)
     {
         @content;
     }
 }
 @mixin bp-small{
-    @media only screen and (max-width: 690px)
+    @media only screen and (max-width: 767px)
     {
         @content;
     }
