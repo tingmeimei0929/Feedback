@@ -8,7 +8,7 @@
         height: 56px;
         line-height: 56px;
         padding: 0 30px;
-        @include font-size(24px);
+        font-size: pxToRem(20px);
         max-width: 100%;
         font-weight: 700;
         text-align: center;
@@ -64,7 +64,6 @@
                 text-align: left;
                 width: 60%;
                 padding:30px;
-                font-size: 14px;
             }
             .images{
                 display: block;

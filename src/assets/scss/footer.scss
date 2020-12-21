@@ -19,7 +19,7 @@
     .present{
         display: block;
         padding-left: 20px;
-        @include font-size(14px);
+        font-size: pxToRem(14px);
 
         p{
             float: left;
@@ -49,6 +49,18 @@
                 display: block;
                 padding: 0 30px 15px 0;
                 width: 50%;
+                float: left;
+                color: $color-white;
+            }
+        }
+    }
+    @include bp-xs {
+        .list{
+            display: block;
+            padding: 10px 20px;
+            a{
+                display: block;
+                padding: 0 10px 15px 0 !important;
                 float: left;
                 color: $color-white;
             }
