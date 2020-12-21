@@ -175,7 +175,8 @@ export default {
     name: "Purchase",
     data() {
         return {
-            active: 1
+            active: 1,
+            user: ''
         }
     },
     methods: {

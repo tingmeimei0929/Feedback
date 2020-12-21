@@ -4,9 +4,7 @@
             <div class="container">
                 <div class="sort">
                     <ul class="sortName">
-                        <router-link to="/NoPurchase" tag="li">未购买，如何购买</router-link>
-                        <router-link to="/Purchase" tag="li">已购买，如何使用</router-link>
-                        <router-link to="/Message" tag="li">请上传的您的问题</router-link>
+                        <li v-for="(item, index) in tagList" :key="index" @click="gotoAddress({path: item.path}, index)" :class="{active: activeIndex == index }">{{ item.name }}</li>
                     </ul>
                 </div>
                 <div class="main-content">
@@ -24,7 +22,21 @@ export default {
     name: "Main",
     data() {
         return {
-
+            tagList: [
+                {
+                    name: '未购买，如何购买',
+                    path: '/NoPurchase'
+                },
+                {
+                    name: '已购买，如何使用',
+                    path: '/Purchase'
+                },
+                {
+                    name: '请上传的您的问题',
+                    path: '/Message'
+                }
+            ],
+            activeIndex: 0,
         };
     },
     components: {
@@ -32,21 +44,10 @@ export default {
         navFooter
     },
     methods:{
-        goNoPurchase() {
-            this.$router.push({
-                path: '/NoPurchase'
-            })
-        },
-        goPurchase() {
-            this.$router.push({
-                path: '/Purchase'
-            })
-        },
-        goMessage() {
-            this.$router.push({
-                path: '/Message'
-            })
-        }
+       gotoAddress(path, index) {
+           this.$router.push(path);
+           this.activeIndex = index;
+       }
     }
 };
 </script>

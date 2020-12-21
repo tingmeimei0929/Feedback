@@ -25,7 +25,7 @@
                     <div class="el-upload__tip" slot="tip">只能上传jpg/png文件，且不超过500kb</div>
                 </el-upload>
             </el-form-item>
-            <el-form-item>
+            <el-form-item class="btnModel">
                 <el-button  type="primary" @click="onSubmit">提交</el-button>
                 <el-button>取消</el-button>
             </el-form-item>

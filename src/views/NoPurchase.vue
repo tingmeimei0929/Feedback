@@ -81,7 +81,8 @@ export default {
     name: "NoPurchase",
     data() {
         return {
-            active: 1
+            active: 1,
+            user: ''
         }
     },
     methods: {

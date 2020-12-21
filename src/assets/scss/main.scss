@@ -1,6 +1,5 @@
 @import './mixin.scss';
 @import './palette.scss';
-@import './common.scss';
 .main{
     width: 100%;
     position: relative;
@@ -13,6 +12,10 @@
                 margin: 10px 80px;
                 display: flex;
                 justify-content: space-between;
+                .active{
+                    background-color: $color-block;
+                    color: $color-white;
+                }
                 li{
                     flex: 1;
                     flex-shrink: 0;
@@ -25,10 +28,6 @@
                     cursor: pointer;
                     color: $color-blue;
                 }
-                li:hover{
-                    background-color: $color-block;
-                    color: $color-white;
-                }
             }
         }
 
@@ -36,28 +35,29 @@
             width: inherit;
             .content{
                 margin:10px 80px 30px 90px;
-                padding-top: 30px;
+                padding: 20px 30px;
                 background-color: $color-white;
                 overflow:hidden;
 
                 .el-steps{
                     width: inherit;
                     height: 40px;
+                    margin-bottom: 30px;
                 }
                 .el-step.is-vertical .el-step__title {
                     padding-bottom: 80px !important;
                     line-height: 33px !important;
                 }
                 .reveal{
-                    margin:10px 60px 30px 60px;
-                    margin-top: 30px;
+                    padding: 10px 30px;
                     width: inherit;
                     position: relative;
 
                     .step{
-                        width: inherit;
                         text-align: center;
+                        margin-left: 100px;
                         &.active1{
+                            margin-left: initial !important;
                             h2{
                                 margin-top: 100px;
                                 text-align: center;
@@ -149,6 +149,10 @@
                     .customerService{
                         width: 30%;
                     }
+                    .btnModel{
+                        text-align: center !important;
+                        margin-left: initial !important;
+                    }
                     .el-button--primary {
                         background-color: $color-blue;
                         color: $color-white;
@@ -168,6 +172,19 @@
         }
     }
     @include bp-large {
+        .reveal{
+            padding: 10px 30px;
+            width: inherit;
+            position: relative;
+
+            .step{
+                text-align: center;
+                margin-left: 60px !important;
+                &.active1{
+                    margin-left: initial !important;
+                }
+            }
+        }
         .el-upload-dragger{
             width: 320px !important;
     
@@ -175,8 +192,25 @@
                 font-size: 50px !important;
             }
         }
+        .btnModel{
+            text-align: center !important;
+            margin-left: initial !important;
+        }
     }
     @include bp-middle {
+        .reveal{
+            padding: 10px 30px;
+            width: inherit;
+            position: relative;
+
+            .step{
+                text-align: center;
+                margin-left: 20px !important;
+                &.active1{
+                    margin-left: initial !important;
+                }
+            }
+        }
         .prompt{
             display: block;
             width:80%;
@@ -187,6 +221,10 @@
             .el-icon-upload{
                 font-size: 50px !important;
             }
+        }
+        .btnModel{
+            text-align: center !important;
+            margin-left: initial !important;
         }
     }
     @include bp-small {
@@ -217,10 +255,17 @@
             background-color: $color-white;
             overflow:hidden;
             .reveal{
-                margin: 20px 10px !important;
-                margin-top: 30px;
+                padding: 10px 20px !important;
                 width: inherit;
                 position: relative;
+    
+                .step{
+                    text-align: center;
+                    margin-left: 0 !important;
+                    &.active1{
+                        margin-left: initial !important;
+                    }
+                }
             }
             .message-form{
                 margin:initial !important;
@@ -235,6 +280,10 @@
                 }
                 .customerService{
                     width: 30%;
+                }
+                .btnModel{
+                    text-align: center !important;
+                    margin-left: initial !important;
                 }
                 .el-button--primary {
                     background-color: $color-blue;
@@ -288,7 +337,7 @@
             overflow:hidden;
             .reveal{
                 margin: 20px 10px !important;
-                margin-top: 30px;
+                padding:20px 30px;
                 width: inherit;
                 position: relative;
             }
@@ -305,6 +354,10 @@
                 }
                 .customerService{
                     width: 30%;
+                }
+                .btnModel{
+                    text-align: center !important;
+                    margin-left: initial !important;
                 }
                 .el-button--primary {
                     background-color: $color-blue;

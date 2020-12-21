@@ -18,7 +18,7 @@ html,body {
     "PingFang TC", "Hiragino Sans GB", "Heiti SC", "Heiti TC",
     "WenQuanYi Micro Hei", "Microsoft YaHei", "Microsoft JhengHei", STHeiti,
     sans-serif;
-    @include font-size(16px);
+    font-size: 16px;
     background: $color-paper 0 0;
     height: 100%;
     line-height: initial !important;
