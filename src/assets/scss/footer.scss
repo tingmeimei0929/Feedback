@@ -8,7 +8,7 @@
 
     .list{
         display: block;
-        padding: 10px 20px;
+        padding: 10px 30px;
         a{
             display: block;
             padding: 0 20px 15px 0;
@@ -18,7 +18,7 @@
     }
     .present{
         display: block;
-        padding-left: 20px;
+        padding-left: 30px;
         font-size: pxToRem(14px);
 
         p{
@@ -28,42 +28,30 @@
     }
 
     @include bp-middle{
-        .list{
+        a{
             display: block;
-            padding: 10px 20px;
-            a{
-                display: block;
-                padding: 0 20px 15px 0;
-                width: 50%;
-                float: left;
-                color: $color-white;
-            }
+            padding: 0 20px 15px 0;
+            width: 50%;
+            float: left;
+            color: $color-white;
         }
     }
 
     @include bp-small {
-        .list{
+        a{
             display: block;
-            padding: 10px 20px;
-            a{
-                display: block;
-                padding: 0 30px 15px 0;
-                width: 50%;
-                float: left;
-                color: $color-white;
-            }
+            padding: 0 30px 15px 0;
+            width: 50%;
+            float: left;
+            color: $color-white;
         }
     }
     @include bp-xs {
-        .list{
+        a{
             display: block;
-            padding: 10px 20px;
-            a{
-                display: block;
-                padding: 0 10px 15px 0 !important;
-                float: left;
-                color: $color-white;
-            }
+            padding: 0 10px 15px 0 !important;
+            float: left;
+            color: $color-white;
         }
     }
 }

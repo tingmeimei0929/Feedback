@@ -5,8 +5,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-html,body {
+html{
+    height: 100%;
+}
+body {
     font-family: "Helvetica Neue", "Lucida Grande", Verdana, "PingFang SC",
     "PingFang TC", "Hiragino Sans GB", "Heiti SC", "Heiti TC",
     "WenQuanYi Micro Hei", "Microsoft YaHei", "Microsoft JhengHei", STHeiti,
@@ -16,8 +18,9 @@ html,body {
     user-select: none;
     font-size: $browser-default-font-size;
     background: $color-paper 0 0;
-    height: 100%;
     line-height: initial !important;
+    position: relative;
+    min-height: 100%;
 }
 
 .container{

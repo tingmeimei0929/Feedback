@@ -1,7 +1,7 @@
 <template>
     <div class="main">
         <navHeader></navHeader>
-            <div class="container">
+            <div class="container middle">
                 <div class="sort">
                     <ul class="sortName">
                         <li v-for="(item, index) in tagList" :key="index" @click="gotoAddress({path: item.path}, index)" :class="{active: activeIndex == index }">{{ item.name }}</li>

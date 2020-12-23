@@ -2,8 +2,8 @@
 @import './palette.scss';
 .main{
     width: 100%;
+    height: 100%;
     position: relative;
-    overflow: hidden;
     .container{
         .sort{
             width: inherit;
@@ -23,7 +23,7 @@
                     background: $color-white;
                     margin-left: 10px;
                     font-weight: 500;
-                    font-size: pxToRem(20px);
+                    font-size: pxToRem(18px);
                     padding: 15px 10px;
                     cursor: pointer;
                     color: $color-blue;
@@ -61,7 +61,7 @@
                             h2{
                                 margin-top: 100px;
                                 text-align: center;
-                                font-size: pxToRem(20px);
+                                font-size: pxToRem(18px);
                                 font-weight: 700;
                                 a{
                                     color: $color-blue;
@@ -74,13 +74,13 @@
                             margin: 10px;
 
                             h2{
-                                font-size: pxToRem(20px);
+                                font-size: pxToRem(18px);
                                 font-weight: 700;
                                 line-height: 1.2;
                                 padding-bottom: .3em;
                             }
                             h3{
-                                font-size: pxToRem(18px);
+                                font-size: pxToRem(17px);
                                 font-weight: 700;
                                 line-height: 1.25;
                                 padding-bottom: 10px;
@@ -185,17 +185,24 @@
                 }
             }
         }
-        .el-upload-dragger{
-            width: 320px !important;
-    
-            .el-icon-upload{
-                font-size: 50px !important;
+        
+        .message-form{
+            margin:30px auto !important;
+            width: 80% !important;
+
+            .el-upload-dragger{
+                width: 320px !important;
+        
+                .el-icon-upload{
+                    font-size: 50px !important;
+                }
+            }
+            .btnModel{
+                text-align: center !important;
+                margin-left: initial !important;
             }
         }
-        .btnModel{
-            text-align: center !important;
-            margin-left: initial !important;
-        }
+        
     }
     @include bp-middle {
         .reveal{
@@ -211,20 +218,42 @@
                 }
             }
         }
-        .prompt{
-            display: block;
-            width:80%;
-        }
-        .el-upload-dragger{
-            width: 320px !important;
-    
-            .el-icon-upload{
-                font-size: 50px !important;
+        .message-form{
+            margin:30px auto !important;
+            width: 85% !important;
+            .enterDesc{
+                width: 80%;
+                border-color: $color-border !important;
             }
-        }
-        .btnModel{
-            text-align: center !important;
-            margin-left: initial !important;
+            .prompt{
+                display: block;
+                width:80%;
+            }
+            .customerService{
+                width: 30%;
+            }
+            .btnModel{
+                text-align: center !important;
+                margin-left: initial !important;
+            }
+            .el-button--primary {
+                background-color: $color-blue;
+                color: $color-white;
+                border-color: $color-blue;
+                padding: 15px 30px;
+            }
+            .el-button--default{
+                background-color: $color-white;
+                color: $color-block;
+                padding: 15px 30px;
+            }
+            .el-upload-dragger{
+                width: 320px !important;
+        
+                .el-icon-upload{
+                    font-size: 50px !important;
+                }
+            }
         }
     }
     @include bp-small {

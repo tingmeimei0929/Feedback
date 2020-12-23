@@ -15,20 +15,22 @@
             <el-form-item label="留言" prop="desc">
                 <el-input type="textarea" v-model="ruleForm.desc" class="enterDesc"></el-input>
             </el-form-item>
-            <el-form-item label="上传" prop="fileList">
+            <el-form-item label="上传" prop="imgUrl">
                 <el-upload  class="upload-demo"
                             drag
                             action="https://jsonplaceholder.typicode.com/posts/"
-                            multiple>
+                            multiple
+                            :on-success="handleAvatarSuccess">
+                    <img v-if="ruleForm.imgUrl" :src="ruleForm.imgUrl">
                     <i class="el-icon-upload"></i>
                     <div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
                     <div class="el-upload__tip" slot="tip">只能上传jpg/png文件，且不超过500kb</div>
                 </el-upload>
             </el-form-item>
-            <el-form-item class="btnModel">
+            <div class="btnModel">
                 <el-button  type="primary" @click="onSubmit">提交</el-button>
                 <el-button>取消</el-button>
-            </el-form-item>
+            </div>
         </el-form>
         <!-- <div class="customerService">
             <h3>客服联系方式</h3>
@@ -47,10 +49,17 @@ export default {
                 username: '',
                 singleNumber: '',
                 contactInfo: '',
-                desc: ''
+                desc: '',
+                imgUrl: ''
             },
             rules: {
-
+                imgUrl: [
+                    {
+                        required: true,
+                        message: ' 请上传图片',
+                        trigger: 'change'
+                    }
+                ]
             }
         }
     },
@@ -68,6 +77,12 @@ export default {
                     })
                 }
             })
+        },
+        handleAvatarSuccess(res, file) {
+            this.$refs.imgUrl.clearValidate(); 
+            this.ruleForm.imgUrl = res.data.filepath;
+            // 上传成功后，手动校验一次表单
+            this.$refs.ruleForm.validateField('imgUrl');
         }
     }
 }
