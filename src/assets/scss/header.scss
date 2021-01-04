@@ -2,7 +2,10 @@
 @import './palette.scss';
 
 .header{
-    background-color: $color-header-bg;
+    flex: 0 0 auto;
+    height: 56px;
+    width: 100%;
+    background-color: $color-block;
     h2{
         display: block;
         height: 56px;
@@ -13,84 +16,7 @@
         font-weight: 700;
         text-align: center;
         color: $color-white;
-        background-color: $color-block;
-    }
-    .banner{
-        width: 80%;
-        margin: 0 auto;
-        padding-bottom:20px;
-        .words{
-            display: block;
-            float: left;
-            text-align: left;
-            width: 60%;
-            padding:30px;
-
-            .strong{
-                padding: 10px 0;
-                font-weight: 700;
-            }
-        }
-        .images{
-            display: block;
-            float: right;
-            width: 380px;
-            height: 214px;
-            background: url(https://www.ftacademy.cn/subscription.jpg) no-repeat;
-            background-size: contain;
-        }
-        @include bp-large{
-            .words{
-                display: block;
-                float: left;
-                text-align: left;
-                width: 50%;
-                padding:30px;
-            }
-            .images{
-                display: block;
-                float: right;
-                width: 380px;
-                height: 214px;
-                background: url(https://www.ftacademy.cn/subscription.jpg) no-repeat;
-                background-size: contain;
-            }
-        }
-
-        @include bp-middle {
-            .words{
-                display: block;
-                float: left;
-                text-align: left;
-                width: 60%;
-                padding:30px;
-            }
-            .images{
-                display: block;
-                margin-top: 20px;
-                float: right;
-                width: 190px;
-                height: 107px;
-                background: url(https://www.ftacademy.cn/subscription.jpg) no-repeat;
-                background-size: contain;
-            }
-        }
-
-        @include bp-small {
-            .words{
-                display: block;
-                text-align: left;
-                width: 100%;
-                padding: 0 !important;
-            }
-            .images{
-                display: block;
-                width: 100%;
-                height: 160px;
-                background: url(https://www.ftacademy.cn/subscription.jpg) no-repeat;
-                background-size: contain;
-            }
-        }
+      
     }
 }
 

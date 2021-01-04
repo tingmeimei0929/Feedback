@@ -5,9 +5,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-html{
-    height: 100%;
-}
+html,
 body {
     font-family: "Helvetica Neue", "Lucida Grande", Verdana, "PingFang SC",
     "PingFang TC", "Hiragino Sans GB", "Heiti SC", "Heiti TC",
@@ -20,7 +18,6 @@ body {
     background: $color-paper 0 0;
     line-height: initial !important;
     position: relative;
-    min-height: 100%;
 }
 
 .container{
