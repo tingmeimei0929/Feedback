@@ -167,6 +167,12 @@
                     .message-form{
                         margin:30px auto;
                         width: 70%;
+                        
+                        .el-form-item__label:before {
+                            content: '*';
+                            color: #F56C6C;
+                            margin-right: 4px;
+                        }
 
                         .enterDesc{
                             width: 80%;
@@ -175,6 +181,7 @@
                         .prompt{
                             display: block;
                             width:80%;
+                            font-size: pxToRem(12px) !important;
                         }
                         .customerService{
                             width: 30%;
@@ -196,6 +203,28 @@
                         }
                         .el-upload-list__item{
                             width: 80% !important;
+                        }
+                    }
+                    .search{
+                        margin: 20px auto;
+                        width: 90%;
+                        height: 100px;
+                        line-height: 100px;
+
+                        .el-input{
+                            display: inline-block;
+                            width: 50%;
+                        }
+                        .el-button{
+                            display: inline-block;
+                            margin-left: 20px;
+                            background-color: $color-blue;
+                            color: $color-white;
+                            font-size: pxToRem(16px);
+
+                            i{
+                                margin-right: 10px;
+                            }
                         }
                     }
                 }
@@ -226,45 +255,41 @@
             background-color: $color-white;
             overflow-y: auto !important;
             height: 60vh !important;
-
-
             .el-steps{
                 width: inherit;
                 height: 40px;
                 margin-bottom: 30px !important; 
             }
-        }
-        .reveal{
-            padding: 10px 30px;
-            width: inherit;
-            position: relative;
+            .reveal{
+                padding: 10px 30px;
+                width: inherit;
+                position: relative;
 
-            .step{
-                text-align: center;
-                margin-left: 60px !important;
-                &.active1{
+                .step{
+                    text-align: center;
+                    margin-left: 60px !important;
+                    &.active1{
+                        margin-left: initial !important;
+                    }
+                }
+            }
+            .message-form{
+                margin:30px auto !important;
+                width: 80% !important;
+
+                .el-upload-dragger{
+                    width: 320px !important;
+            
+                    .el-icon-upload{
+                        font-size: 50px !important;
+                    }
+                }
+                .btnModel{
+                    text-align: center !important;
                     margin-left: initial !important;
                 }
             }
         }
-        
-        .message-form{
-            margin:30px auto !important;
-            width: 80% !important;
-
-            .el-upload-dragger{
-                width: 320px !important;
-        
-                .el-icon-upload{
-                    font-size: 50px !important;
-                }
-            }
-            .btnModel{
-                text-align: center !important;
-                margin-left: initial !important;
-            }
-        }
-        
     }
     @include bp-middle {
         .bgColor{

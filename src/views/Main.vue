@@ -43,8 +43,12 @@ export default {
                     path: '/Purchase'
                 },
                 {
-                    name: '请上传的您的问题',
+                    name: '新建问题工单',
                     path: '/Message'
+                },
+                {
+                    name: '我的工单',
+                    path: '/Examine'
                 }
             ],
             activeIndex: 0,
