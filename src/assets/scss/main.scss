@@ -3,39 +3,8 @@
 .main{
     width: 100%;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
     .container{
         &.middle{
-            flex-grow: 1;
-            .banner{
-                background-color: $color-header-bg;
-                .bgColor{
-                    width: 80%;
-                    margin: 0 auto;
-                    padding-bottom:20px;
-                    .words{
-                        display: block;
-                        float: left;
-                        text-align: left;
-                        width: 60%;
-                        padding:30px;
-            
-                        .strong{
-                            padding: 10px 0;
-                            font-weight: 700;
-                        }
-                    }
-                    .images{
-                        display: block;
-                        float: right;
-                        width: 380px;
-                        height: 214px;
-                        background: url(https://www.ftacademy.cn/subscription.jpg) no-repeat;
-                        background-size: contain;
-                    }
-                }
-            }
             .sort{
                 width: inherit;
                 margin:20px 0;
@@ -67,7 +36,7 @@
                     margin:10px 80px 30px 90px;
                     padding: 20px 30px;
                     background-color: $color-white;
-                    overflow:hidden;
+                    min-height: 800px;
 
                     .el-steps{
                         width: inherit;
@@ -232,29 +201,10 @@
         }
     }
     @include bp-large {
-        .bgColor{
-            .words{
-                display: block;
-                float: left;
-                text-align: left;
-                width: 50% !important;
-                padding:30px;
-            }
-            .images{
-                display: block;
-                float: right;
-                width: 380px;
-                height: 214px;
-                background: url(https://www.ftacademy.cn/subscription.jpg) no-repeat;
-                background-size: contain;
-            }
-        }
         .content{
             margin:10px 80px 30px 90px;
             padding: 50px 30px !important;
             background-color: $color-white;
-            overflow-y: auto !important;
-            height: 60vh !important;
             .el-steps{
                 width: inherit;
                 height: 40px;
@@ -292,24 +242,6 @@
         }
     }
     @include bp-middle {
-        .bgColor{
-            .words{
-                display: block;
-                float: left;
-                text-align: left;
-                width: 60%;
-                padding:30px;
-            }
-            .images{
-                display: block;
-                margin-top: 20px !important;
-                float: right;
-                width: 240px !important;
-                height: 160px !important;
-                background: url(https://www.ftacademy.cn/subscription.jpg) no-repeat;
-                background-size: contain;
-            }
-        }
         .reveal{
             padding: 10px 30px;
             width: inherit;
@@ -362,21 +294,6 @@
         }
     }
     @include bp-small {
-        .bgColor{
-            .words{
-                display: block;
-                text-align: left;
-                width: 100% !important;
-                padding: 0 !important;
-            }
-            .images{
-                display: block;
-                width: 100% !important;
-                height: 160px !important;
-                background: url(https://www.ftacademy.cn/subscription.jpg) no-repeat;
-                background-size: contain;
-            }
-        }
         .sortName{
             margin: 0 10px 20px 10px !important;
             display: flex;

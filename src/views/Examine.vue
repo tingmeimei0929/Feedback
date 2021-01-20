@@ -5,11 +5,11 @@
             <el-button><i class="el-icon-search"></i>搜索</el-button>
         </div>
         <div class="table">
-            <!-- <el-table :data="tableData" border style="width:100%">
+            <el-table :data="tableData" border>
                 <el-table-column prop="number" label="反馈查询号" width="180" class="t-header"></el-table-column>
                 <el-table-column prop="desc" label="问题表述" width="320" class="t-header"></el-table-column>
                 <el-table-column prop="date" label="日期" width="180" class="t-header"></el-table-column>
-            </el-table> -->
+            </el-table>
         </div>
     </div>
 </template>
